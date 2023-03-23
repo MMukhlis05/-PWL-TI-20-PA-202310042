@@ -84,13 +84,13 @@ export default function FormMulti() {
     const resultPost = (obj) => {
         return (
             <div className="result">
-                {(obj.map((v, index) => (
-                    (v) ? (
+                {(obj.map((e, index) => (
+                    (e) ? (
                         <div className="border-bottom mb-3" key={index}>
-                            <p><span className="fw-bolder">NPM:</span> {v.npm}</p>
-                            <p><span className="fw-bolder">Fullname:</span> {v.fname} {v.mname} {v.lname} </p>
-                            <p><span className="fw-bolder">Birthdate:</span> {v.birthdate} </p>
-                            <p><span className="fw-bolder">Age:</span> {calculateAge(v.birthdate)} years old </p>
+                            <p><span className="fw-bolder">NPM:</span> {e.npm}</p>
+                            <p><span className="fw-bolder">Fullname:</span> {e.fname} {e.mname} {e.lname} </p>
+                            <p><span className="fw-bolder">Birthdate:</span> {e.birthdate} </p>
+                            <p><span className="fw-bolder">Age:</span> {calculateAge(e.birthdate)} years old </p>
                         </div>
                     ) : ""
                 )))}
@@ -125,8 +125,8 @@ export default function FormMulti() {
                             </tr>
                         </thead>
                         <tbody>
-                            {postData.map((v, index) => (
-                                (v) ? <RowItem key={index} data={v} index={index} /> : ''
+                            {postData.map((e, index) => (
+                                (e) ? <RowItem key={index} data={e} index={index} /> : ''
                             ))}
                         </tbody>
                         <tfoot>
